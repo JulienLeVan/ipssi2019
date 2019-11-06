@@ -1,3 +1,5 @@
+# Permet d'afficher la moyenne des nombres entrés en argument
+
 sum=0
 
 while read n;do
