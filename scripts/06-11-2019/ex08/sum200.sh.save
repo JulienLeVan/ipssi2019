@@ -1,0 +1,7 @@
+# Entrée des nombres de 1 à 200
+
+for i in {0..200};do
+	echo $i;
+done 
+
+exit
