@@ -1,5 +1,0 @@
-for i in {0..200};do
-	echo $i;
-done 
-
-exit
