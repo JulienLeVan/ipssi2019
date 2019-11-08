@@ -23,7 +23,7 @@ fi
 - ex08
 - ex09
 - ex10
-- ex11 - Pas réussi, voici les codes 
+- ex11 - Pas réussi, voici les codes :  
 DOCKERFILE
 ```
 FROM alpine:3.9
