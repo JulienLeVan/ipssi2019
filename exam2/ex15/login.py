@@ -1,10 +1,18 @@
 #!/usr/bin/python3
 
-import sys
+import hashlib
 
-str = "ipssi"
-mdp = hashlib.md5(str.encode())
+y = hashlib.md5("ipssi".encode()).hexdigest()
 
-def compare_pass
-    if sys.argv[1] == mdp
-        print("md5 ipssi :", mdp) 
+print('md5 "ipssi" : ', y)
+
+def compare_pass(test):
+
+    x = hashlib.md5(test.encode()).hexdigest()
+
+    print('md5    pass : ', x)
+
+    if x == y :
+        print('login ok')
+    else:
+        print('login failed')
