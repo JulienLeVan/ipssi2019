@@ -1,6 +1,6 @@
 # Description
 
-Voici la liste des dossiers contenus dans le dossier exam2 : 
+Voici la liste des dossiers contenus dans le dossier **exam2** : 
 
 - ex01 du script shell
 ```
