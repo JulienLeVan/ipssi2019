@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-
 file = open("docker-compose.yml", "r")
-##lines = file.readlines()
-##file.close
+
+word = "image:"
 
 for line in file:
-   print(line)
+    if word in line:
+        print(line.strip().split()[1])
+
 
 file.close
