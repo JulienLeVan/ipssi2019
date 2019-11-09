@@ -4,9 +4,7 @@ import datetime
 
 def logthis(a):
    fichier = open("python.log", "a")
-   date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+   date = datetime.datetime.now().strftime('%d-%b-%Y %H:%M:%S')
    text = date + " " + str(a)
    fichier.write(text+"\n")
    fichier.close
-
-
