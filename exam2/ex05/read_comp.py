@@ -6,7 +6,7 @@ word = "image:"
 
 for line in file:
     if word in line:
-        print(line.strip().split(":")[1])
+        print(line.strip().split()[1])
 
 
 file.close

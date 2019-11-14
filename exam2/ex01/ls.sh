@@ -5,6 +5,6 @@ if [ -e $1 ];then
 	echo "ls ok"
 else
 	ls $1 2>> /tmp/ls_err.log
-	echo "ls fail"
+	echo "ls FAIL"
 fi
 

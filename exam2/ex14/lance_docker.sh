@@ -1,8 +1,6 @@
 #!/bin/bash
 
-docker build -t ipssi/ex14:1 .
-
-docker run -i -t ipssi/ex14:1 /bin/sh
+docker run -i -t -v /tmp:/out ipssi/ex14:1 /bin/sh
 
 
 
