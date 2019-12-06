@@ -5,9 +5,6 @@ import sys
 
 def show_tree(n):
 
-    # n = int(sys.argv[1])
-    # print (type(l))
-
     # LARGEUR DU SAPIN
     if n%2 == 0 :
         largeur = n + 1
@@ -23,29 +20,21 @@ def show_tree(n):
     # HAUTEUR DU  TRONC
     hauteur = floor(n/5) + 1
 
-    print("Largeur " + str(largeur))
-    print("Tronc " + str(tronc))
-    print("Hauteur " + str(hauteur))
+    p = int(largeur/2)+1
 
-    # OK POUR LES BRANCHES, DESSINE LES BRANCHES
-    for i in range(largeur):
-        print(" "*(largeur-i) + 'X' * ( (2*i+1 - largeur+1)))    
-
-    # test 
-    # for i in range(largeur):
-    #     print( 'X' * ( (2*i+1 - largeur +1 ) ) )
-
-    # DESSINE LE TRONC
+    # BRANCHES
+    for i in range(p):
+        print(" "*(p-1-i) + 'X' * ( (2*i+1)))    
+        
+    # TRONC
     if tronc == 1:
         for i in range(hauteur):
-            print(" " *( (ceil(largeur/2)) ) + "X")
+            print(" " *( (ceil(largeur/2))-1 ) + "X")
     else:
         for i in range(hauteur):
-            print(" "*( (floor(largeur/2)) )  + "XXX")
-
-
-# print(' '*((ceil(n/2)))+'#')
+            print(" "*( (floor(largeur/2))-1 )  + "XXX")
 
 
 if __name__ == "__main__":
-    print(show_tree(int(sys.argv[1])))
+    out = (show_tree(int(sys.argv[1])))
+    print(out)
