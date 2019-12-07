@@ -24,10 +24,8 @@ def show_tree(n):
 
     # BRANCHES
     for i in range(p):
-        a = (" "*(p-1-i) + 'X' * ( (2*i+1)))    
-
-    print(a)    
-    
+        print(" "*(p-1-i) + 'X' * ( (2*i+1)))    
+        
     # TRONC
     if tronc == 1:
         for i in range(hauteur):
