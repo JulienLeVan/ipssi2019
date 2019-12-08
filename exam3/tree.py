@@ -33,10 +33,11 @@ def show_tree(n):
     for i in range(hauteur):
         if tronc == 1:
             t = t + (" " * ( (ceil(largeur/2)) -1 ) + "X")
+            t = t 
         else:
-            t = t + (" " * ( (floor(largeur/2) ) -1 )  + "XXX")
+            t = t + (" " * ( (floor(largeur/2) ) -1 )  + "X" * 3)
             t = t + "\n"
-   
+             
     return t
 
 if __name__ == "__main__":
