@@ -22,20 +22,24 @@ def show_tree(n):
 
     p = int(largeur/2)+1
 
+    t = ""
+
     # BRANCHES
     for i in range(p):
-        print(" "*(p-1-i) + 'X' * ( (2*i+1)))    
-    
+        t = t + (" " * (p-1-i) + 'X' * ((2*i+1)) )
+        t = t + "\n"
 
     # TRONC
-    if tronc == 1:
-        for i in range(hauteur):
-            print(" " *( (ceil(largeur/2))-1 ) + "X")
+    for i in range(hauteur):
+        if tronc == 1:
+            t = t + (" " * ( (ceil(largeur/2)) -1 ) + "X")
+  
 
-    else:
-        for i in range(hauteur):
-            print(" "*( (floor(largeur/2))-1 )  + "XXX")
-    
-    
+        else:
+            t = t + (" " * ( (floor(largeur/2) ) -1 )  + "XXX")
+            t = t + "\n"
+   
+    return t
+
 if __name__ == "__main__":
-    (show_tree(int(sys.argv[1])))
+    print(show_tree(int(sys.argv[1])))
