@@ -37,7 +37,9 @@ def show_tree(n):
         else:
             t = t + (" " * ( (floor(largeur/2) ) -1 )  + "X" * 3)
             t = t + "\n"
-             
+            
+    t = t[:-1]   
+    
     return t
 
 if __name__ == "__main__":

@@ -8,10 +8,11 @@ def show_sla(n):
     down = 365.25 * 24 * 60 * 60 * ( (100 - n) / 100 )
 
     h = int(down / (60 * 60))
+    
 
-    m = int(down % 60)
+    m = int(down % (60 * 60) // 60)
 
-    s = round(down % (60 * 60) % 60 ,1)
+    s = down % (60 * 60) % 60 // 1 
     
     time = str(h) + "h " + str(m) + "m " + str(s) + "s"
 
