@@ -18,10 +18,11 @@ def show_noel(n):
     month = int(d[1])
     day = int(d[2])
 
-    if year<=2019:
-        d1 = date(year, 12, 25) - date(year, month, day)
+    if day > 25 and month == 12 :
+        d1 = date(year+1, 12, 25) - date(year, month, day)
     else:
         d1 = date(year, 12, 25) - date(year, month, day)
+        
 
     t = str(d1.days) + " days before christmas\n"
 
@@ -33,14 +34,26 @@ def show_noel(n):
     
     else:
        
-        t = t + calendar.month(year,month).replace( d, "("+d+")", 1)
-           
-        while month <= 10:
-            t = t + calendar.month(year,(month+1))
-            month = month + 1
+        if day > 25 and month == 12:
+            t = t + calendar.month(year,month).replace( d, "("+d+")", 1)
+            year = year+1
+            while month <= 10:
+                t = t + calendar.month(year,(month+1))
+                month = month + 1
             
-        t = t + calendar.month(year,12).replace( "25", "[25]", 1)
+            t = t + calendar.month(year,12).replace( "25", "[25]", 1)
         
+        
+        else:
+
+            t = t + calendar.month(year,month).replace( d, "("+d+")", 1)
+            
+
+            while month <= 10:
+                t = t + calendar.month(year,(month+1))
+                month = month + 1
+            
+            t = t + calendar.month(year,12).replace( "25", "[25]", 1)
         return t
 
 
